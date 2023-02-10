@@ -68,6 +68,10 @@ $ yarn run test:e2e
 $ yarn run test:cov
 ```
 
+## Apollo Server
+
+You can use Sandbox without an internet connection if you're querying a graph running on [http://localhost:3000/graphql](http://localhost:3000/graphql). To do so, open Sandbox in your browser at least   once while connected to the internet. You can then use that browser to open Sandbox while offline.
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
