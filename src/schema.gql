@@ -2,29 +2,33 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type Item {
-  """Example field (placeholder)"""
-  exampleField: Int!
+type ItemEntity {
+  id: ID!
+  name: String!
+  quantity: Float!
+  quantityUnits: String
 }
 
 type Query {
-  items: [Item!]!
-  item(id: Int!): Item!
+  items: [ItemEntity!]!
+  item(id: ID!): ItemEntity!
 }
 
 type Mutation {
-  createItem(createItemInput: CreateItemInput!): Item!
-  updateItem(updateItemInput: UpdateItemInput!): Item!
-  removeItem(id: Int!): Item!
+  createItem(createItemInput: CreateItemInput!): ItemEntity!
+  updateItem(updateItemInput: UpdateItemInput!): ItemEntity!
+  removeItem(id: ID!): ItemEntity!
 }
 
 input CreateItemInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  name: String!
+  quantity: Float!
+  quantityUnits: String
 }
 
 input UpdateItemInput {
-  """Example field (placeholder)"""
-  exampleField: Int
-  id: Int!
+  name: String
+  quantity: Float
+  quantityUnits: String
+  id: ID!
 }
